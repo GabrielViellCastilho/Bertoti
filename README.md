@@ -16,3 +16,10 @@ Nesta parte do texto, explica-se que o programador é a função que desenvolve 
 - Em relação aos sistemas operacionais, há a comparação entre Linux e Windows. O Linux possui uma melhor estabilidade e performance, porém perde em usabilidade. Já o Windows possui uma melhor usabilidade devido à sua interface gráfica, mas perde em desempenho.
 
 - Outro exemplo é a comparação entre bancos de dados SQL e NoSQL. No banco de dados SQL, há uma melhor integridade de dados, porém com perda de performance e flexibilidade. Já no NoSQL, obtém-se performance e flexibilidade, porém com perda na integridade dos dados.
+---
+
+Um exemplo de trade-off é a arquitetura de um sistema através de microserviços, que possui uma melhor escalabilidade e uma melhor manutenção do sistema. No entanto, aumenta a complexidade do sistema como um todo, como no caso do X (Twitter).
+
+![Arquitetura Twitter](https://pbs.twimg.com/media/Fh8OE2jUAAEIVRR?format=jpg&name=4096x4096)
+
+---
