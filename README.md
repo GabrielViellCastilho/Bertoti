@@ -23,3 +23,71 @@ Um exemplo de trade-off é a arquitetura de um sistema através de microserviço
 ![Arquitetura Twitter](https://pbs.twimg.com/media/Fh8OE2jUAAEIVRR?format=jpg&name=4096x4096)
 
 ---
+
+```mermaid
+classDiagram
+    direction LR
+
+    class Banco {
+      - List~Conta~ listaContas
+      - String nome
+      - String cnpj
+      + Banco(String nome, String cnpj)
+      + getNome(): String
+      + getListaContas(): List~Conta~
+    }
+
+    class Cliente {
+      - String nome
+      - String cpf
+      - String telefone
+      - String email
+      - ContaCorrente contaCorrente
+      - ContaPoupanca contaPoupanca
+      + Cliente(String nome, String cpf, String telefone, String email)
+      + setContaCorrente(ContaCorrente contaCorrente)
+      + setContaPoupanca(ContaPoupanca contaPoupanca)
+      + getNome(): String
+    }
+
+    class Conta {
+      <<abstract>>
+      - String AGENCIA
+      - String NUMERO
+      - double saldo
+      - Cliente cliente
+      - Banco banco
+      + Conta(Cliente cliente, String agencia, String numero, Banco banco)
+      + deposito(double valor)
+      + saque(double valor)
+      + transferencia(double valor, String numero, Banco banco)
+      + exibirDadosConta()
+      + getNumero(): String
+      + getSaldo(): double
+      - setSaldo(double saldo)
+    }
+
+    class ContaCorrente {
+      + ContaCorrente(Cliente cliente, String agencia, String numero, Banco banco)
+    }
+
+    class ContaPoupanca {
+      + ContaPoupanca(Cliente cliente, String agencia, String numero, Banco banco)
+    }
+
+    class ServicoConta {
+      <<interface>>
+      + deposito(double valor)
+      + saque(double valor)
+      + transferencia(double valor, String numero, Banco banco)
+      + exibirDadosConta()
+    }
+
+    Banco --> Conta : 1 * 
+    Conta --> Cliente : 1 1 
+    ContaCorrente --|> Conta 
+    ContaPoupanca --|> Conta 
+    Conta --> ServicoConta
+    Cliente --> ContaCorrente : 1 1
+    Cliente --> ContaPoupanca : 1 1
+```
