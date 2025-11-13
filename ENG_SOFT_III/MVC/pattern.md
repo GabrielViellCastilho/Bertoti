@@ -42,7 +42,7 @@ classDiagram
 
 ---
 
-## ⚙️ Funcionamento
+## Funcionamento
 
 1. O **usuário interage** com a **View** (por exemplo, digitando um dado ou clicando em um botão).
 2. A **View** chama o **Controller**, que **processa a ação**.
