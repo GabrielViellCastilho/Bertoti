@@ -120,18 +120,6 @@ Assim, o comportamento pode ser **trocado dinamicamente**, sem modificar o códi
 
 ---
 
-## Comparação entre Herança e Strategy
-
-| Aspecto | Herança | Strategy Pattern |
-|----------|----------|------------------|
-| Extensão de comportamento | Por subclasses | Por composição |
-| Flexibilidade em tempo de execução | Baixa | Alta |
-| Reutilização de código | Limitada | Alta |
-| Acoplamento | Forte | Fraco |
-| Testabilidade | Difícil | Fácil |
-
----
-
 ## Conclusão
 
 O uso da **herança para variar comportamentos** pode parecer simples no início, mas torna o sistema **difícil de manter e expandir**.  

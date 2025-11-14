@@ -45,7 +45,7 @@ classDiagram
 
 ---
 
-## ⚙️ Funcionamento
+## Funcionamento
 
 1. O **Subject (Assunto)** mantém uma lista de **Observers** interessados.  
 2. Quando ocorre uma **mudança de estado** no **Subject**, ele chama o método `notifyObservers()`.  
@@ -141,7 +141,7 @@ public class Main {
 
 ---
 
-## 🧩 Saída Esperada
+## Saída Esperada
 
 ```
 Observador 1 recebeu a atualização: Novo estado definido!
