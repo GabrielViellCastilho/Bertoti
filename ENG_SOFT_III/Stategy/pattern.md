@@ -34,7 +34,7 @@ classDiagram
         +executar()
     }
 
-    Context --> Strategy
+    Context *--> Strategy
     Strategy <|.. ConcreteStrategyA
     Strategy <|.. ConcreteStrategyB
 ```
