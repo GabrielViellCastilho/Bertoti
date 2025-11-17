@@ -12,36 +12,6 @@ O principal objetivo do MVC é **separar as responsabilidades**, facilitando a m
 
 ---
 
-## Estrutura do Padrão
-
-### UML Simplificado
-
-```mermaid
-classDiagram
-    class Model {
-        -dados
-        +getDados()
-        +setDados()
-    }
-
-    class View {
-        +mostrarDados(dados)
-        +lerEntrada()
-    }
-
-    class Controller {
-        -model : Model
-        -view : View
-        +atualizarModelo(dados)
-        +atualizarVisao()
-    }
-
-    Model <-- Controller
-    View <-- Controller
-```
-
----
-
 ## Funcionamento
 
 1. O **usuário interage** com a **View** (por exemplo, digitando um dado ou clicando em um botão).
