@@ -39,7 +39,7 @@ classDiagram
     }
 
     Subject <|-- ConcreteSubject
-    Observer <|-- ConcreteObserver
+    Observer <|.. ConcreteObserver
     ConcreteObserver --> ConcreteSubject
 ```
 
