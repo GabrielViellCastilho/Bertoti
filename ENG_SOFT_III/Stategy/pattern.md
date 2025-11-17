@@ -35,8 +35,8 @@ classDiagram
     }
 
     Context --> Strategy
-    Strategy <|-- ConcreteStrategyA
-    Strategy <|-- ConcreteStrategyB
+    Strategy <|.. ConcreteStrategyA
+    Strategy <|.. ConcreteStrategyB
 ```
 
 ---
